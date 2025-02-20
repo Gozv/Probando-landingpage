@@ -1,0 +1,62 @@
+# Entornos virtuales y Python
+venv/
+.env
+.env.prod
+.env.dev
+*.pyc
+__pycache__/
+.pytest_cache/
+*.pyo
+*.pyd
+
+# Base de datos
+*.db
+*.sqlite3
+
+# Docker
+docker-compose.override.yml
+data/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node.js (si usas herramientas frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend assets
+frontend/static/css/*.css.map
+frontend/static/js/*.js.map
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Builds y paquetes
+dist/
+build/
+*.egg-info/
+*.exe
+
+# Testing
+coverage.xml
+.coverage
+htmlcov/
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Certificados SSL
+*.key
+*.crt
+*.pem
