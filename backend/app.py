@@ -53,3 +53,5 @@ app = create_app()
 if __name__ == '__main__':
     app.run()
 
+# En app.py
+app.after_request(security_headers)
