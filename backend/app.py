@@ -4,6 +4,19 @@ from backend.config import Config
 from backend.models import db
 from backend.routes.api import api
 import logging
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+
+def create_app():
+    app = Flask(__name__)
+    limiter = Limiter(
+        app=app,
+        key_func=get_remote_address,
+        default_limits=["200 per day", "50 per hour"]
+    )
+    
+    # Límites específicos
+    limiter.limit("10/minute")(api.blueprint)
 
 def create_app():
     app = Flask(__name__, 
