@@ -60,3 +60,4 @@ htmlcov/
 *.key
 *.crt
 *.pem
+.pre-commit-config.yaml
