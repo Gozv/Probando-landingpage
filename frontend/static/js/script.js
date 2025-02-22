@@ -137,3 +137,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const filter = this.dataset.filter;
+        
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        document.querySelectorAll('.project-card').forEach(card => {
+            const matches = filter === 'all' || card.dataset.tags.includes(filter);
+            card.style.display = matches ? 'block' : 'none';
+        });
+    });
+});
