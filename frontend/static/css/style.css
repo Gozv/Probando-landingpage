@@ -270,3 +270,24 @@ body {
     transform: translateZ(-1px) scale(1.5);
     z-index: -1;
 }
+
+.project-filters {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--secondary-color);
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background: var(--secondary-color);
+    color: white;
+}
